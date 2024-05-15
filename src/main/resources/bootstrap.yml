@@ -1,0 +1,19 @@
+spring.application.name: config-server
+server.port: 9091
+
+spring:
+ cloud:
+  config:
+   server:
+    git:
+     uri: https://github.com/Sikandar-73/infrastructure-config-store.git
+     cloneOnStart: true
+     username: Sikandar-73
+     password: password
+     skipSslValidation: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
